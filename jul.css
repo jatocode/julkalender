@@ -2,7 +2,7 @@ body {
     background: #34A65F;
     padding-top: 1em;
     color: #fff;
-    font-family: "Raleway", sans-serif;
+    font-family: "Mountains of Christmas", sans-serif;
 }
 
 h1 {
@@ -11,7 +11,7 @@ h1 {
     padding: 0 0em;
     max-width: 42rem;
     line-height: 1.2;
-    font-size: 3em;
+    font-size: 4em;
     text-transform: uppercase;
     font-weight: 900;
 }
@@ -38,7 +38,8 @@ label {
 
 .lucka {
     position: relative;
-    height: 3em;
+    height: 2.5em;
+    font-size: 1.2em;
     width: 100%;
     border: dashed 1px wheat;
     text-align: center;
@@ -63,7 +64,7 @@ label {
 }
 
 :checked + .lucka {
-    font-size: 0.5em;
-    height: 5em;
+    font-size: 0.6em;
+    height: 4em;
     transform: rotateY(180deg) scale(1.5);
 }
