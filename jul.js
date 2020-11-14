@@ -10,16 +10,6 @@ const ktexter = [
     'AEQAZQB0ACAAaADkAHIAIADkAHIAIABlAG4AIABqAOQAdAB0AGUAbADlAG4AZwAgAHQAZQB4AHQAIABzAG8AbQAgAGsAYQBuAHMAawBlACAAZgBsAHkAdABlAHIAIAD2AHYAZQByACAAawBhAG4AdABlAHIAbgBhACAAbQBlAG4AIABzAOUAIABmAOUAcgAgAGQAZQB0ACAAYgBsAGkAcgAgAGkAcwDlAGYAYQBsAGwA'
 ]
 
-const texter = [
-    '1 God Jul',
-    '2 Snön faller och vi med den',
-    '3 Tomten kysser mamma',
-    '4 Nu tändas tusen juleljus',
-    '5 Nu tändas tusen juleljus',
-    '6 Nu tändas tusen juleljus',
-    '7 Nu tändas tusen juleljus',
-]
-
 function slumpaluckor() {
     let luckordning = JSON.parse(localStorage.getItem('luckordning'));
     if (luckordning == undefined) {
@@ -60,7 +50,6 @@ function kalender() {
             } else {
                 let bak = el.querySelector('.bak');
                 bak.textContent = window.atob(ktexter[(input.id - 1) % ktexter.length]);
-                //bak.textContent = texter[(input.id - 1) % texter.length];
             }
         }
     });
