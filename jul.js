@@ -1,11 +1,15 @@
-document.addEventListener("DOMContentLoaded", julenarhar);
+document.addEventListener("DOMContentLoaded", julenärhär);
 
-function julenarhar() {
-    let luckor = [...document.getElementsByClassName('lucka')];
+function julenärhär() {
+    let luckor = [...document.getElementsByClassName('clucka')];
 
     luckor.forEach(el => {
-        el.onclick = (e) => { 
-            e.target.classList.toggle('öppen');
+        el.onclick = (e) => {
+            if (e.target.id > new Date().getDate()) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+
         }
     });
 }
