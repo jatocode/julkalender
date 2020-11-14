@@ -22,6 +22,7 @@ h1 {
     grid-template-columns: auto auto auto auto auto;
     grid-gap: 2em;
     padding: 2em;
+    background-image: url('bakgrund.jpg');
 }
 
 .lucka {
@@ -29,4 +30,8 @@ h1 {
     text-align: center;
     height: 2em;
     padding: 1em;
+}
+
+.öppen {
+    border: solid 1px red;
 }
