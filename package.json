@@ -1,0 +1,13 @@
+{
+    "name": "julkalender",
+    "version": "1.0.0",
+    "description": "",
+    "main": "jul.js",
+    "scripts": {
+        "deploy": "scp -r * tobias@benchpress.local:/var/www/julkalender/",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Tobias Jansson",
+    "license": "ISC",
+    "devDependencies": {}
+}

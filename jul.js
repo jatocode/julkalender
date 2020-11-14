@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", julenärhär);
+document.addEventListener("DOMContentLoaded", kalender);
 
 const ktexter = [
     'R29kIGp1bA',
@@ -13,7 +13,7 @@ const texter = [
     'Nu tändas tusen juleljus'
 ]
 
-function julenärhär() {
+function kalender() {
     let luckor = [...document.getElementsByClassName('jul')];
 
     luckor.forEach((el,i) => {
