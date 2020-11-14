@@ -1,3 +1,10 @@
+/*
+    Liten enkel julkalender.
+    Tobias Jansson, 2020.
+
+    https://github.com/jatocode/julkalender
+*/
+
 document.addEventListener("DOMContentLoaded", () => {
     slumpaluckor();
     skapaluckor();
