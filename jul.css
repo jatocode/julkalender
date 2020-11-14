@@ -46,14 +46,13 @@ label {
 }
 
 .lucka div {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
     position: absolute;
     height: 100%;
     width: 100%;
     backface-visibility: hidden;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .lucka .bak {
@@ -62,5 +61,5 @@ label {
 }
 
 :checked + .lucka {
-    transform: rotateY(180deg);
+    transform: rotateZ(3deg) rotateY(180deg) scale(3);
 }
