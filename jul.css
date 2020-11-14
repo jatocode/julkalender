@@ -37,6 +37,7 @@ label {
 }
 
 .lucka {
+    position: relative;
     height: 3em;
     width: 100%;
     border: dashed 1px wheat;
@@ -61,5 +62,5 @@ label {
 }
 
 :checked + .lucka {
-    transform: rotateZ(3deg) rotateY(180deg) scale(3);
+    transform: rotateY(180deg) scale(2);
 }

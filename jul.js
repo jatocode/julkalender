@@ -13,8 +13,9 @@ function julenärhär() {
         let fram = el.querySelector('.fram');
         let input = el.querySelector('input');
         fram.textContent = input.id;
-
         el.onclick = (e) => {
+            let lucka = e.target.parentElement;
+            lucka.style.zIndex = lucka.style.zIndex == 100 ? 0 : 100;
             if (e.target.id > new Date().getDate()) {
                 e.preventDefault();
                 e.stopPropagation();
