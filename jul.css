@@ -1,5 +1,5 @@
 body {
-    background: #003;
+    background: #34A65F;
     padding-top: 1em;
     color: #fff;
     font-family: "Raleway", sans-serif;
@@ -57,10 +57,10 @@ label {
 }
 
 .lucka .bak {
-    background-color: #2e313d;
+    background-color:#CC231E;
     transform: rotateY(180deg);
 }
 
 :checked + .lucka {
-    transform: rotateY(180deg) scale(2);
+    transform: rotateY(180deg) scale(2.5);
 }

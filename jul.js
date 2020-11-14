@@ -1,9 +1,16 @@
 document.addEventListener("DOMContentLoaded", julenärhär);
 
-const texter = [
+const ktexter = [
     'R29kIGp1bA',
     'AFQAbwBiAGkAYQBzACAA5AByACAAdABvAG0AdABlAG4A',
     'AEQAZQB0ACAAaADkAHIAIADkAHIAIABlAG4AIABqAOQAdAB0AGUAbADlAG4AZwAgAHQAZQB4AHQAIABzAG8AbQAgAGsAYQBuAHMAawBlACAAZgBsAHkAdABlAHIAIAD2AHYAZQByACAAawBhAG4AdABlAHIAbgBhACAAbQBlAG4AIABzAOUAIABmAOUAcgAgAGQAZQB0ACAAYgBsAGkAcgAgAGkAcwDlAGYAYQBsAGwA'
+]
+
+const texter = [
+    'God Jul',
+    'Snön faller och vi med den',
+    'Tomten kysser mamma',
+    'Nu tändas tusen juleljus'
 ]
 
 function julenärhär() {
@@ -21,7 +28,8 @@ function julenärhär() {
                 e.stopPropagation();
             } else {
                 let bak = el.querySelector('.bak');
-                bak.textContent = window.atob(texter[i % texter.length]);
+               // bak.textContent = window.atob(ktexter[i % ktexter.length]);
+                bak.textContent = texter[i % texter.length];
             }
         }
     });
