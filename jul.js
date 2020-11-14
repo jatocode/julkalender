@@ -11,7 +11,6 @@ const ktexter = [
 ]
 
 const texter = [
-    '',
     '1 God Jul',
     '2 Snön faller och vi med den',
     '3 Tomten kysser mamma',
@@ -60,8 +59,8 @@ function kalender() {
                 e.stopPropagation();
             } else {
                 let bak = el.querySelector('.bak');
-                // bak.textContent = window.atob(ktexter[i % ktexter.length]);
-                bak.textContent = texter[input.id % (texter.length - 1)];
+                bak.textContent = window.atob(ktexter[(input.id - 1) % ktexter.length]);
+                //bak.textContent = texter[(input.id - 1) % texter.length];
             }
         }
     });

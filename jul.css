@@ -63,5 +63,7 @@ label {
 }
 
 :checked + .lucka {
-    transform: rotateY(180deg) scale(2.5);
+    font-size: 0.5em;
+    height: 5em;
+    transform: rotateY(180deg) scale(1.5);
 }
