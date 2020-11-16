@@ -47,6 +47,7 @@ function kalender() {
     luckor.forEach(el => {
         let fram = el.querySelector('.fram');
         let input = el.querySelector('input');
+        fram.id = input.id;
         fram.textContent = input.id;
         el.onclick = (e) => {
             let lucka = e.target.parentElement;
