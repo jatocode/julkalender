@@ -42,17 +42,17 @@ function skapaluckor() {
 }
 
 function kalender() {
-    let luckor = [...document.getElementsByClassName('jul')];
-    luckor.forEach(el => {
+   let luckor = [...document.getElementsByClassName('lucka')];
+   luckor.forEach(el => {
         el.onclick = (e) => {
             let lucka = e.target.parentElement;
             lucka.style.zIndex = lucka.style.zIndex == 100 ? 0 : 100;
             if (e.target.id > new Date().getDate()) {
                 e.preventDefault();
                 e.stopPropagation();
-            } else {
+            } else if (e.target.id != '') {
                 let bak = el.querySelector('.bak');
-                bak.textContent = window.atob(ktexter[(e.target.id  - 1) % ktexter.length]);
+                bak.textContent = window.atob(ktexter[(e.target.id - 1) % ktexter.length]);
             }
         }
     });
