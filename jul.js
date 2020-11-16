@@ -6,7 +6,6 @@
 */
 
 document.addEventListener("DOMContentLoaded", () => {
-    slumpaluckor();
     skapaluckor();
     kalender();
 });
