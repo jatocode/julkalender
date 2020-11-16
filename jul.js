@@ -35,20 +35,16 @@ function skapaluckor() {
     let lucka1 = document.getElementsByClassName('jul')[0];
     slumpaluckor().forEach(x => {
         const l = lucka1.cloneNode(true);
-        let cb = l.querySelector('input');
-        cb.id = x;
+        let fram = l.querySelector('.fram');
+        fram.textContent = x;
+        fram.id = x;
         kal.append(l);
     });
 }
 
 function kalender() {
     let luckor = [...document.getElementsByClassName('jul')];
-
     luckor.forEach(el => {
-        let fram = el.querySelector('.fram');
-        let input = el.querySelector('input');
-        fram.id = input.id;
-        fram.textContent = input.id;
         el.onclick = (e) => {
             let lucka = e.target.parentElement;
             lucka.style.zIndex = lucka.style.zIndex == 100 ? 0 : 100;
@@ -57,7 +53,7 @@ function kalender() {
                 e.stopPropagation();
             } else {
                 let bak = el.querySelector('.bak');
-                bak.textContent = window.atob(ktexter[(input.id - 1) % ktexter.length]);
+                bak.textContent = window.atob(ktexter[(e.target.id  - 1) % ktexter.length]);
             }
         }
     });
