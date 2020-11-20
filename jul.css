@@ -3,6 +3,7 @@ body {
     padding-top: 1em;
     color: #fff;
     font-family: "Mountains of Christmas", sans-serif;
+    margin: 0 4em 4em;
 }
 
 h1 {
@@ -38,7 +39,7 @@ label {
 
 .lucka {
     position: relative;
-    height: 2.5em;
+    height: 3.0em;
     font-size: 1.2em;
     width: 100%;
     border: dashed 1px wheat;
@@ -66,5 +67,5 @@ label {
 :checked + .lucka {
     font-size: 0.6em;
     height: 4em;
-    transform: rotateY(180deg) scale(1.5);
+    transform: rotateZ(1deg) rotateY(180deg) scale(2.5);
 }

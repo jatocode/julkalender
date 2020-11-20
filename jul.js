@@ -63,7 +63,7 @@ function skapaluckor() {
 }
 
 function kalender() {
-   let luckor = [...document.getElementsByClassName('lucka')];
+   let luckor = [...document.getElementsByClassName('jul')];
    luckor.forEach(el => {
         el.onclick = (e) => {
             let lucka = e.target.parentElement;
