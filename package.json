@@ -4,7 +4,8 @@
     "description": "",
     "main": "jul.js",
     "scripts": {
-        "deploy": "scp -r * tobias@benchpress.local:/var/www/julkalender/",
+        "deploy": "scp -r * tobias@tobiasjansson.dev:/var/www/julkalender/",
+        "rdeploy": "rsync -av -e ssh --exclude='package.json' * tobias@tobiasjansson.dev:/var/www/julkalender/",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "Tobias Jansson",
