@@ -41,7 +41,8 @@ function kalender() {
         el.onclick = (e) => {
             let lucka = e.target.parentElement;
             lucka.style.zIndex = lucka.style.zIndex == 100 ? 0 : 100;
-            if (e.target.id > new Date().getDate()) {
+            let month = new Date().getMonth();
+            if (month != 11 || e.target.id > new Date().getDate()) {
                 e.preventDefault();
                 e.stopPropagation();
             } else if (e.target.id != '') {
