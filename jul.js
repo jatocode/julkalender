@@ -81,5 +81,5 @@ const ktexter = [
 'VGEgZW4gcHJvbWVuYWQgbWVkIGVuIHbkbg==',
 'R/ZyIG7lZ29uIGdsYWQ=',
 'RGV0IHZpIGludGUgZ/ZyIGlkYWcgLSBzbGlwcGVyIHZpIGf2cmEgb20gaW1vcmdvbg==',
-'MjQgLSBHb2QgSnVsIQ=='
+'R29kIEp1bCE='
 ]
