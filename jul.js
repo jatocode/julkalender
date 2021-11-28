@@ -42,7 +42,7 @@ function kalender() {
             let lucka = e.target.parentElement;
             lucka.style.zIndex = lucka.style.zIndex == 100 ? 0 : 100;
             let now = new Date();
-            if (now.getMonth() != 11 || e.target.id > now.getDate()) {
+            if (now.getMonth() != 10 || e.target.id > now.getDate()) {
                 e.preventDefault();
                 e.stopPropagation();
             } else if (e.target.id != '') {
@@ -67,7 +67,7 @@ const ktexter = [
 'U2p1bmcgZW4ganVsc+VuZyBm9nIgZW4ga29sbGVnYSBlbGxlciB25G4=',
 'VORuZCBldHQgbGp1cyBvY2ggbORzIGVuIGJvayBpIGx1Z24gb2NoIHJv',
 'R3JhdHRpcyBUb21teSBvY2ggQW5uYQ==',
-'Tm9iZWxkYWdlbiAtIGZpcmEgc3RvcnQgbWVkIGJ1YmJlbCBvY2ggbWVkYWxqZXI=',
+'Tm9iZWxkYWdlbiAtIGZpcmEgbWVkIGJ1YmJlbCBvY2ggbWVkYWxqZXIuIEdyYXR0aXMgTWFsaW4h',
 'U2tyaXYgcmltIHRpbGwgZW4ganVsa2xhcHA=',
 'UHludGEgduVyIHByb2pla3Ro9nJuYSBtZWQgZW4gdG9tdGUgc3Rq5HJuYSBlbGxlciBqdWxrdWxh',
 'THVjaWEgLSBzbnVycmEgZ2xpdHRlciBydW50IG32c3NhbiBvY2ggdGEgZW4gcHJvbWVuYWQ=',
