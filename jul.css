@@ -1,7 +1,7 @@
 body {
-    background: #34A65F;
+    background: hwb(172 15% 44%);
     padding-top: 1em;
-    width: 800px;
+    width: 700px;
     color: #fff;
     font-family: "Mountains of Christmas", sans-serif;
     margin: 0 4em 4em;
@@ -21,10 +21,13 @@ h1 {
 #kalender {
     display: grid;
     align-content: space-evenly;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: repeat(3, 1fr);
+/* grid-template-columns: auto auto auto auto auto; */
     grid-gap: 2em;
-    padding: 2em;
-    background-image: url("UE_jul2021.jpg");
+    padding: 4em;
+    background-image: url("christmas.jpg");
+    width: 800px;
+    height: 500px;
 }
 
 input {
@@ -40,10 +43,11 @@ label {
 
 .lucka {
     position: relative;
-    height: 3.0em;
+    height: 10.0em;
     font-size: 1.2em;
-    width: 100%;
-    border: dashed 1px wheat;
+    width: 70%;
+    color: darkgreen;
+    border: dashed 2px darkgreen;
     text-align: center;
     transform-style: preserve-3d;
     transition: all 300ms;
@@ -61,12 +65,13 @@ label {
 }
 
 .lucka .bak {
-    background-color:#CC231E;
+    color: white;
+    background-color: #020;
     transform: rotateY(180deg);
 }
 
 :checked + .lucka {
     font-size: 0.6em;
-    height: 4em;
+    height: 12em;
     transform: rotateZ(1deg) rotateY(180deg) scale(2.5);
 }
