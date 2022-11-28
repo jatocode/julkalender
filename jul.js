@@ -11,14 +11,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function slumpaluckor() {
-    let luckordning = JSON.parse(localStorage.getItem('luckordning'));
+    let luckordning = JSON.parse(localStorage.getItem('luckordning6luckor'));
     if (luckordning == undefined) {
         luckordning = [];
         while (luckordning.length < 5) {
             let dag = getRandomInt(5) + 2;
             if (!luckordning.includes(dag)) luckordning.push(dag);
         }
-        localStorage.setItem('luckordning', JSON.stringify(luckordning));
+        localStorage.setItem('luckordning6luckor', JSON.stringify(luckordning));
     }
     return luckordning;
 }
