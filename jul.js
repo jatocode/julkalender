@@ -5,56 +5,58 @@
     https://github.com/jatocode/julkalender
 */
 
+const antalLuckor = 6
+
 document.addEventListener("DOMContentLoaded", () => {
-    skapaluckor();
-    kalender();
+    skapaluckor()
+    kalender()
 });
 
 function slumpaluckor() {
     let luckordning = JSON.parse(localStorage.getItem('luckordning6luckor'));
     if (luckordning == undefined) {
-        luckordning = [];
-        while (luckordning.length < 5) {
-            let dag = getRandomInt(5) + 2;
-            if (!luckordning.includes(dag)) luckordning.push(dag);
+        luckordning = []
+        while (luckordning.length < (antalLuckor-1)) {
+            let dag = getRandomInt(antalLuckor-1) + 2
+            if (!luckordning.includes(dag)) luckordning.push(dag)
         }
-        localStorage.setItem('luckordning6luckor', JSON.stringify(luckordning));
+        localStorage.setItem('luckordning6luckor', JSON.stringify(luckordning))
     }
-    return luckordning;
+    return luckordning
 }
 
 function skapaluckor() {
-    let kal = document.getElementById('kalender');
-    let lucka1 = document.getElementsByClassName('jul')[0];
+    let kal = document.getElementById('kalender')
+    let lucka1 = document.getElementsByClassName('jul')[0]
     slumpaluckor().forEach(x => {
-        const l = lucka1.cloneNode(true);
+        const l = lucka1.cloneNode(true)
         let fram = l.querySelector('.fram');
-        fram.textContent = x;
-        fram.id = x;
-        kal.append(l);
-    });
+        fram.textContent = x
+        fram.id = x
+        kal.append(l)
+    })
 }
 
 function kalender() {
-    let luckor = [...document.getElementsByClassName('jul')];
+    let luckor = [...document.getElementsByClassName('jul')]
     luckor.forEach(el => {
         el.onclick = (e) => {
-            let lucka = e.target.parentElement;
-            lucka.style.zIndex = lucka.style.zIndex == 100 ? 0 : 100;
+            let lucka = e.target.parentElement
+            lucka.style.zIndex = lucka.style.zIndex == 100 ? 0 : 100
             // let now = new Date();
             // if (now.getMonth() != 11 || e.target.id > now.getDate()) {
             //     e.preventDefault();
             //     e.stopPropagation();
             // } else if (e.target.id != '') {
-                let bak = el.querySelector('.bak');
-                bak.textContent = window.atob(ktexter[(e.target.id - 1) % ktexter.length]);
+                let bak = el.querySelector('.bak')
+                bak.textContent = window.atob(ktexter[(e.target.id - 1) % ktexter.length])
             //}
         }
     });
 }
 
 function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
+    return Math.floor(Math.random() * Math.floor(max))
 }
 
 const ktexter = [
